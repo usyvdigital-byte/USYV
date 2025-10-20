@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USYV Digital - Creative Agency</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- AOS CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 z-50 origin-left scale-x-0"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-gray-900 bg-opacity-80 backdrop-blur-sm p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white hover:text-blue-400 transition-colors duration-300">
+                USYV Digital
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="nav-link text-lg text-gray-300 hover:text-blue-400 transition-colors duration-300">Home</a>
+                <a href="#about" class="nav-link text-lg text-gray-300 hover:text-blue-400 transition-colors duration-300">About</a>
+                <a href="#services" class="nav-link text-lg text-gray-300 hover:text-blue-400 transition-colors duration-300">Services</a>
+                <a href="#contact" class="nav-link text-lg text-gray-300 hover:text-blue-400 transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-900 bg-opacity-95 z-40 flex-col items-center justify-center space-y-8 text-xl transform translate-x-full transition-transform duration-300 ease-in-out hidden">
+        <button id="close-mobile-menu" class="absolute top-4 right-4 text-white text-3xl focus:outline-none">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#hero" class="nav-link text-white hover:text-blue-400 transition-colors duration-300" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full');">Home</a>
+        <a href="#about" class="nav-link text-white hover:text-blue-400 transition-colors duration-300" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full');">About</a>
+        <a href="#services" class="nav-link text-white hover:text-blue-400 transition-colors duration-300" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full');">Services</a>
+        <a href="#contact" class="nav-link text-white hover:text-blue-400 transition-colors duration-300" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full');">Contact</a>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+            <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');"></div>
+            <div class="relative z-10 p-4 max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white hero-text-animate-1">
+                    Innovate. Create. Elevate.
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-10 hero-text-animate-2">
+                    Your Vision, Our Digital Craft.
+                </p>
+                <a href="#contact" class="btn-primary inline-block px-10 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 btn-glowing hero-text-animate-3">
+                    Let's Talk
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-800 relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+            <div class="absolute inset-0 z-0 opacity-5" style="background-image: url('https://www.transparenttextures.com/patterns/gplay.png');"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="text-4xl font-extrabold text-center mb-12 text-white">Who We Are</h2>
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                        USYV Digital is a creative agency specializing in digital marketing, web design, and AI-driven brand automation. We help startups, schools, and local businesses grow with clarity and creativity.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-900 relative">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-extrabold text-center mb-16 text-white">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <!-- Service Card 1 -->
+                    <div class="service-card p-8 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-105 border border-gray-700" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                        <div class="text-5xl text-blue-400 mb-6 text-center">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Social Media Marketing</h3>
+                        <p class="text-gray-400 text-center">Engage your audience and build your brand presence across all major social platforms.</p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card p-8 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-105 border border-gray-700" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                        <div class="text-5xl text-purple-400 mb-6 text-center">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Website Design & Branding</h3>
+                        <p class="text-gray-400 text-center">Craft stunning, user-friendly websites that convert visitors into loyal customers.</p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card p-8 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-105 border border-gray-700" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                        <div class="text-5xl text-green-400 mb-6 text-center">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 text-center">AI WhatsApp Bots</h3>
+                        <p class="text-gray-400 text-center">Automate customer interactions and support with intelligent WhatsApp bots.</p>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="service-card p-8 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-105 border border-gray-700" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                        <div class="text-5xl text-red-400 mb-6 text-center">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Ad Campaign Strategy</h3>
+                        <p class="text-gray-400 text-center">Develop data-driven ad strategies that maximize your ROI and reach the right audience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800 relative" data-aos="fade-up" data-aos-duration="1000">
+            <div class="absolute inset-0 z-0 opacity-5" style="background-image: url('https://www.transparenttextures.com/patterns/scribble-light.png');"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="text-4xl font-extrabold text-center mb-12 text-white">Get In Touch</h2>
+                <div class="max-w-2xl mx-auto bg-gray-900 p-8 rounded-lg shadow-2xl border border-gray-700">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700" placeholder="Your Name">
+                            <p id="name-error" class="text-red-500 text-xs italic mt-1 hidden">Please enter your name.</p>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700" placeholder="your.email@example.com">
+                            <p id="email-error" class="text-red-500 text-xs italic mt-1 hidden">Please enter a valid email address.</p>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="6" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700" placeholder="Tell us about your project..."></textarea>
+                            <p id="message-error" class="text-red-500 text-xs italic mt-1 hidden">Please enter your message.</p>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button type="submit" class="btn-primary px-8 py-3 text-lg font-semibold rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 btn-glowing">
+                                Send Message
+                            </button>
+                        </div>
+                        <p id="form-success" class="text-green-400 text-center mt-4 hidden">Your message has been sent successfully!</p>
+                        <p id="form-error" class="text-red-500 text-center mt-4 hidden">There was an error sending your message. Please try again.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://wa.me/your-number" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center text-2xl" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-700">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-8">
+                <a href="#" class="text-3xl font-bold text-white">USYV Digital</a>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://instagram.com/your-profile" target="_blank" class="text-gray-400 hover:text-pink-500 transition-colors duration-300 text-2xl" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-300 text-2xl" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/your-number" target="_blank" class="text-gray-400 hover:text-green-500 transition-colors duration-300 text-2xl" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; <span id="current-year"></span> USYV Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP and ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

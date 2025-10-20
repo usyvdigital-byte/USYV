@@ -1,0 +1,76 @@
+/* Custom CSS for USYV Digital Website */
+
+/* Glowing Button Effect */
+.btn-glowing {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-glowing::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 25%,
+        #3B82F6 50%, /* Blue */
+        #A855F7 75%, /* Purple */
+        rgba(255, 255, 255, 0) 100%
+    );
+    z-index: -1;
+    animation: rotate 4s linear infinite;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.btn-glowing:hover::before {
+    opacity: 1; /* Show on hover */
+}
+
+.btn-glowing::after {
+    content: '';
+    position: absolute;
+    inset: 2px; /* Inner border to reveal the glowing effect */
+    background: #111827; /* Dark background to match */
+    border-radius: 9999px; /* Full rounded corners */
+    z-index: 0;
+}
+
+.btn-glowing > * {
+    position: relative;
+    z-index: 2; /* Keep text above the glow and inner background */
+    color: white; /* Ensure text color is visible */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Base button styling (Tailwind classes will override/supplement) */
+.btn-primary {
+    background: linear-gradient(to right, #3B82F6, #A855F7); /* Blue to Purple */
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Ensure mobile menu behaves correctly */
+#mobile-menu:not(.translate-x-full) {
+    display: flex; /* Make it visible when not translated */
+}
+
+/* Custom styles for input focus to match theme */
+input:focus, textarea:focus {
+    --tw-ring-color: #3B82F6 !important; /* Force blue ring on focus */
+}
